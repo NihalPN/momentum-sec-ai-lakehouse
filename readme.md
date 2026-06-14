@@ -4,18 +4,23 @@
 
 Momentum Lakehouse is a cloud-native architecture that automatically harvests massive regulatory documents (SEC 8-K filings), routes them through an event-driven AWS serverless pipeline, and utilizes **Gemini 3.1 Flash-Lite** to extract quantitative market momentum signals and AI-generated summaries in real-time.
 
-![Dashboard Preview](media/dashboard_screenshot.png)
+!![Dashboard Preview](https://raw.githubusercontent.com/NihalPN/momentum-sec-ai-lakehouse/main/media/dashboard-screenshot.png)
 
 ## 🎥 Pipeline Demonstration
 
 Watch the full data engineering pipeline in action—from raw SEC EDGAR ingestion in the terminal to real-time frontend visualization:
 
-<video src="media/pipeline-demo.mp4?raw=true" controls="controls" width="100%">
+<video src="https://raw.githubusercontent.com/NihalPN/momentum-sec-ai-lakehouse/main/media/pipeline-demo.mp4" controls="controls" width="100%">
   Your browser does not support the video tag.
 </video>
+
 ---
-##  Architecture Diagram
-![Architecture Diagram](media/Architecture.png)
+
+## 🏗️ Architecture Diagram
+
+![Architecture Diagram](https://raw.githubusercontent.com/NihalPN/momentum-sec-ai-lakehouse/main/media/Architecture.png)
+
+
 ## 🚀 Architecture Overview
 
 1. **Ingestion Engine:** A Python harvester polls the SEC EDGAR database for live corporate disclosures and drops raw JSON payloads into an Amazon S3 Raw Data Lake.
