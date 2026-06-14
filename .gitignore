@@ -1,0 +1,16 @@
+# .gitignore
+__pycache__/
+*.pyc
+.env
+lambda_payload.zip
+package/
+build_env/
+node_modules/
+.DS_Store
+
+# Terraform tracking exclusions
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+terraform/.terraform/
