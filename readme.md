@@ -6,7 +6,7 @@
 
 **An Event-Driven AI Data Pipeline for SEC Regulatory Filings**
 
-Momentum Lakehouse is a cloud-native architecture that automatically harvests massive regulatory documents (SEC 8-K filings), routes them through an event-driven AWS serverless pipeline, and utilizes **Gemini 3.1 Flash-Lite** to extract quantitative market momentum signals and AI-generated summaries in real-time.
+Momentum Lakehouse is a cloud-native architecture that automatically ingests SEC 8-K filings, routes them through an event-driven AWS serverless pipeline, and utilizes **Gemini 3.1 Flash-Lite** to extract quantitative market momentum signals and AI-generated summaries in real-time.
 
 ![Dashboard Preview](media/dashboard_screenshot.png)
 ## 🎥 Pipeline Demonstration
