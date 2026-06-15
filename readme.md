@@ -25,8 +25,8 @@ Watch the full data engineering pipeline in action—from raw SEC EDGAR ingestio
 
 1. **Ingestion Engine:** A Python harvester polls the SEC EDGAR database for live corporate disclosures and drops raw JSON payloads into an Amazon S3 Raw Data Lake.
 2. **Event-Driven AI Extraction:** S3 `ObjectCreated` events trigger an asynchronous AWS Lambda function. 
-3. **Structured Modeling:** The Lambda function invokes the `google-genai` SDK, forcing Gemini 3.1 Flash-Lite to evaluate the text using strict Pydantic schemas to output JSON containing confidence scores, momentum sentiment (-1.0 to 1.0), and business summaries.
-4. **Lakehouse Delivery:** The structured AI analytics are deposited into a secondary data layer and served via AWS API Gateway, instantly populating the serverless UI.
+3. **Structured Modeling:** The Lambda function invokes the `google-genai` SDK, utilizing Gemini 3.1 Flash-Lite with Pydantic for strict structured JSON outputto evaluate the text using strict Pydantic schemas to output JSON containing confidence scores, momentum sentiment (-1.0 to 1.0), and business summaries.
+4. **Lakehouse Delivery:** Processed JSON payloads are stored in a processed S3 bucket and served via AWS API Gateway, instantly populating the serverless UI.
 
 ## 🛠️ Tech Stack
 * **Cloud Infrastructure:** AWS (S3, Lambda, API Gateway, IAM)
@@ -36,5 +36,5 @@ Watch the full data engineering pipeline in action—from raw SEC EDGAR ingestio
 
 ## ⚡ Key Engineering Features
 * **Decoupled Engine Design:** LLM extractors are built as modular classes, allowing instant swapping between models (Gemini, Llama, Claude) without altering pipeline logic.
-* **Cost-Optimized Storage:** The frontend retrieves massive 50-page unaltered documents dynamically from the Raw S3 bucket via Lineage Locators, preventing data bloat and reducing read-costs in the structured analytical bucket.
+* **Cost-Optimized Storage:** The frontend retrieves full-length documents dynamically from the Raw S3 bucket via Lineage Locators, preventing data bloat and reducing read-costs in the structured analytical bucket.
 * **Resilience:** Implemented exponential backoff, schema evaluation `.model_json_schema()`, and dynamic rate-limit handling for high-throughput LLM inference across serverless containers.
