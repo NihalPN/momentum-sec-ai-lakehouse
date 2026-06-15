@@ -8,7 +8,7 @@ Momentum Lakehouse is a cloud-native architecture that automatically harvests ma
 ## 🎥 Pipeline Demonstration
 
 Watch the full data engineering pipeline in action—from raw SEC EDGAR ingestion in the terminal to real-time frontend visualization:
-[![Demo Video](assets/demo-thumbnail.png)](https://github.com/NihalPN/momentum-sec-ai-lakehouse/raw/main/media/pipeline-demo.mp4)
+[![Demo Video](media/dashboard_screenshot.png)](https://github.com/NihalPN/momentum-sec-ai-lakehouse/raw/main/media/pipeline-demo.mp4)
 
 ---
 
